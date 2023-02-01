@@ -1,6 +1,9 @@
+import { useGetCountries } from "./hooks";
 import { Header, Search, Filter, PreviewList } from "./components";
 
 function App() {
+  const { isLoading, isError, data } = useGetCountries();
+
   return (
     <div className="App">
       <Header />
@@ -9,7 +12,7 @@ function App() {
           <Search />
           <Filter />
         </div>
-        <PreviewList />
+        <PreviewList isLoading={isLoading} error={isError} data={data} />
       </main>
     </div>
   );

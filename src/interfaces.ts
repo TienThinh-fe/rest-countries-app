@@ -10,3 +10,9 @@ export interface countryPreview {
 export interface countryList {
   countries: countryPreview[];
 }
+
+export interface useQueryReturn {
+  data: countryPreview[];
+  isLoading: boolean;
+  isError: boolean;
+}
