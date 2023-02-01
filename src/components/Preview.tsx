@@ -2,12 +2,12 @@ import { CountryType } from "../data";
 import { formatNumber } from "../helper";
 
 export function Preview({ country }: { country: CountryType }) {
-  const { name, population, region, capital } = country;
+  const { name, population, region, capital, img } = country;
 
   return (
     <div className="preview">
       <div className="preview__image">
-        {/* <img src="https://restcountries.eu/data/afg.svg" alt="Afghanistan" /> */}
+        <img src={img} alt={name} />
       </div>
       <div className="preview__info">
         <div className="preview__info--title">

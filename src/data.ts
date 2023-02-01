@@ -1,4 +1,5 @@
 export interface CountryType {
+  img: string;
   name: string;
   population: number;
   region: string;
@@ -12,108 +13,49 @@ export interface CountryListType {
 export const dumbData: CountryListType = {
   countries: [
     {
+      img: "https://flagcdn.com/vn.svg",
       name: "Afghanistan",
       population: 27657145,
       region: "Asia",
       capital: "Kabul",
     },
     {
-      name: "Afghanistan",
-      population: 276545,
-      region: "Asia",
-      capital: "Kabul",
-    },
-    {
+      img: "https://flagcdn.com/vn.svg",
       name: "Afghanistan",
       population: 27657145,
       region: "Asia",
       capital: "Kabul",
     },
     {
+      img: "https://flagcdn.com/vn.svg",
       name: "Afghanistan",
       population: 27657145,
       region: "Asia",
       capital: "Kabul",
     },
     {
+      img: "https://flagcdn.com/vn.svg",
       name: "Afghanistan",
       population: 27657145,
       region: "Asia",
       capital: "Kabul",
     },
     {
+      img: "https://flagcdn.com/vn.svg",
       name: "Afghanistan",
       population: 27657145,
       region: "Asia",
       capital: "Kabul",
     },
     {
+      img: "https://flagcdn.com/vn.svg",
       name: "Afghanistan",
       population: 27657145,
       region: "Asia",
       capital: "Kabul",
     },
     {
-      name: "Afghanistan",
-      population: 27657145,
-      region: "Asia",
-      capital: "Kabul",
-    },
-    {
-      name: "Afghanistan",
-      population: 27657145,
-      region: "Asia",
-      capital: "Kabul",
-    },
-    {
-      name: "Afghanistan",
-      population: 27657145,
-      region: "Asia",
-      capital: "Kabul",
-    },
-    {
-      name: "Afghanistan",
-      population: 27657145,
-      region: "Asia",
-      capital: "Kabul",
-    },
-    {
-      name: "Afghanistan",
-      population: 27657145,
-      region: "Asia",
-      capital: "Kabul",
-    },
-    {
-      name: "Afghanistan",
-      population: 27657145,
-      region: "Asia",
-      capital: "Kabul",
-    },
-    {
-      name: "Afghanistan",
-      population: 27657145,
-      region: "Asia",
-      capital: "Kabul",
-    },
-    {
-      name: "Afghanistan",
-      population: 27657145,
-      region: "Asia",
-      capital: "Kabul",
-    },
-    {
-      name: "Afghanistan",
-      population: 27657145,
-      region: "Asia",
-      capital: "Kabul",
-    },
-    {
-      name: "Afghanistan",
-      population: 27657145,
-      region: "Asia",
-      capital: "Kabul",
-    },
-    {
+      img: "https://flagcdn.com/vn.svg",
       name: "Afghanistan",
       population: 27657145,
       region: "Asia",
