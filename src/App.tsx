@@ -1,4 +1,4 @@
-import { Header, Search, Filter } from "./components";
+import { Header, Search, Filter, PreviewList } from "./components";
 
 function App() {
   return (
@@ -9,6 +9,7 @@ function App() {
           <Search />
           <Filter />
         </div>
+        <PreviewList />
       </main>
     </div>
   );
