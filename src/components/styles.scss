@@ -1,1 +1,113 @@
 @use "../utils";
+
+.header {
+  width: 100%;
+  padding: 24px 0;
+  border-bottom: 2px solid rgb(145 145 145 / 10%);
+  &__container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    font-weight: 800;
+    font-size: 20px;
+  }
+  &__theme {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    img {
+      width: 16px;
+      height: 16px;
+    }
+    span {
+      margin-left: 8px;
+      font-weight: 600;
+    }
+  }
+}
+
+.main {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: utils.$very-light-gray;
+}
+
+.helper {
+  width: 90%;
+  margin: 0 auto;
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search {
+  input {
+    width: 320px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border: none;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: utils.$dark-gray;
+    box-shadow: utils.$box-shadow;
+    -webkit-box-shadow: utils.$box-shadow;
+    -moz-box-shadow: utils.$box-shadow;
+    border-radius: 4px;
+    background: url(../assets/search.webp) no-repeat scroll 24px 13px;
+    background-size: 12px;
+    padding-left: 54px;
+  }
+}
+
+.filter {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  width: 144px;
+  height: 40px;
+  background-color: white;
+  box-shadow: utils.$box-shadow;
+  border-radius: 4px;
+  cursor: pointer;
+  span {
+    font-size: 12px;
+    font-weight: 600;
+  }
+  img {
+    width: 16px;
+    height: auto;
+  }
+}
+
+.filter-options {
+  position: absolute;
+  background-color: white;
+  box-shadow: utils.$box-shadow;
+  top: 48px;
+  right: 0;
+  font-size: 12px;
+  font-weight: 600;
+  width: 184px;
+  border-radius: 4px;
+  ul {
+    width: 100%;
+    margin: 12px 0;
+    li {
+      padding: 12px 20px;
+      cursor: pointer;
+      &:hover {
+        background-color: utils.$very-light-gray;
+      }
+    }
+  }
+}
