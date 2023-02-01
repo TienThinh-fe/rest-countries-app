@@ -1,13 +1,13 @@
-import { CountryType } from "../data";
+import { countryPreview } from "../interfaces";
 import { formatNumber } from "../helper";
 
-export function Preview({ country }: { country: CountryType }) {
-  const { name, population, region, capital, img } = country;
+export function Preview({ country }: { country: countryPreview }) {
+  const { name, population, region, capital, flags } = country;
 
   return (
     <div className="preview">
       <div className="preview__image">
-        <img src={img} alt={name} />
+        <img src={flags} alt={name} />
       </div>
       <div className="preview__info">
         <div className="preview__info--title">
