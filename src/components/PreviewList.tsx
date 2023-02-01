@@ -1,17 +1,13 @@
 import { Preview } from "./Preview";
 
+import { dumbData, CountryType, CountryListType } from "../data";
+
 export function PreviewList() {
   return (
     <div className="preview-list">
-      <Preview />
-      <Preview />
-      <Preview />
-      <Preview />
-      <Preview />
-      <Preview />
-      <Preview />
-      <Preview />
-      <Preview />
+      {dumbData.countries.map((country: CountryType) => (
+        <Preview country={country} />
+      ))}
     </div>
   );
 }

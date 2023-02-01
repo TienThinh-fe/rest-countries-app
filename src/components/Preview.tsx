@@ -1,4 +1,9 @@
-export function Preview() {
+import { CountryType } from "../data";
+import { formatNumber } from "../helper";
+
+export function Preview({ country }: { country: CountryType }) {
+  const { name, population, region, capital } = country;
+
   return (
     <div className="preview">
       <div className="preview__image">
@@ -6,19 +11,19 @@ export function Preview() {
       </div>
       <div className="preview__info">
         <div className="preview__info--title">
-          <span>Afghanistan</span>
+          <span>{name}</span>
         </div>
         <div className="preview__info--population">
           <span className="name">Population: </span>
-          <span>27,657,145</span>
+          <span>{formatNumber(population)}</span>
         </div>
         <div className="preview__info--region">
           <span className="name">Region: </span>
-          <span>Asia</span>
+          <span>{region}</span>
         </div>
         <div className="preview__info--capital">
           <span className="name">Capital: </span>
-          <span>Kabul</span>
+          <span>{capital}</span>
         </div>
       </div>
     </div>
