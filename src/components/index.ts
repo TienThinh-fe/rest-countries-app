@@ -6,3 +6,5 @@ export * from "./Header";
 export * from "./Search";
 export * from "./Filter";
 export * from "./FilterOptions";
+export * from "./DetailContent";
+export * from "./BorderCountry";
