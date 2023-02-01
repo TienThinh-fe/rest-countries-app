@@ -2,11 +2,14 @@ import { useQuery } from "@tanstack/react-query";
 import { getCountries } from "./helper";
 import { countryPreview, useQueryReturn } from "./interfaces";
 
-export function useGetCountries(filter?: string): useQueryReturn {
+export function useGetCountries(
+  filter?: string,
+  name?: string
+): useQueryReturn {
   const { data, error, isLoading } = useQuery({
     queryKey: ["countries", filter],
     queryFn: async () => {
-      const dataFormApi = await getCountries(filter);
+      const dataFormApi = await getCountries(filter, name);
       let dataNormalized: countryPreview[] = [];
 
       dataFormApi.forEach((country: any) => {

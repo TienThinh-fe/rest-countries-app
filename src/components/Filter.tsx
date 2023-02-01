@@ -9,10 +9,13 @@ export function Filter() {
     state.filter,
     state.setFilter,
   ]);
+  const setName = useStore((state: any) => state.setName);
+
   const [isOpenFilter, setIsOpenFilter] = useState(false);
 
   function handleClick(region: string) {
     setFilter(region);
+    setName("");
   }
 
   function handleOpenFilter() {
