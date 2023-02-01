@@ -4,7 +4,7 @@ import { countryPreview, useQueryReturn } from "./interfaces";
 
 export function useGetCountries(filter?: string): useQueryReturn {
   const { data, error, isLoading } = useQuery({
-    queryKey: ["countries"],
+    queryKey: ["countries", filter],
     queryFn: async () => {
       const dataFormApi = await getCountries(filter);
       let dataNormalized: countryPreview[] = [];

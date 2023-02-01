@@ -1,8 +1,10 @@
 import { useGetCountries } from "./hooks";
 import { Header, Search, Filter, PreviewList } from "./components";
+import useStore from "./store";
 
 function App() {
-  const { isLoading, isError, data } = useGetCountries();
+  const filter = useStore((state: any) => state.filter);
+  const { isLoading, isError, data } = useGetCountries(filter);
 
   return (
     <div className="App">
