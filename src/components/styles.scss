@@ -1,5 +1,10 @@
 @use "../utils";
 
+.main {
+  min-height: 100vh;
+  background-color: utils.$very-light-gray;
+}
+
 .header {
   width: 100%;
   padding: 24px 0;
@@ -30,11 +35,6 @@
       font-weight: 600;
     }
   }
-}
-
-.main {
-  min-height: 100vh;
-  background-color: utils.$very-light-gray;
 }
 
 .helper {
