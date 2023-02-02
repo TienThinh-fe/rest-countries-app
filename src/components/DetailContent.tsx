@@ -74,10 +74,16 @@ export function DetailContent(detail: { detail: countryDetail }) {
         <div className="detail__content__info--border">
           <span className="name">Border Countries: </span>
           <div className="country">
-            <BorderCountry
-              arrayCode={borders}
-              handleClick={handleClickBorder}
-            />
+            {borders ? (
+              <BorderCountry
+                arrayCode={borders}
+                handleClick={handleClickBorder}
+              />
+            ) : (
+              <span className="no-border">
+                Has no border with other countries
+              </span>
+            )}
           </div>
         </div>
       </div>
