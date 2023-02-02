@@ -10,13 +10,13 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <main className="main">
+      {/* <main className="main">
         <div className="helper">
           <Search />
           <Filter />
         </div>
         <PreviewList isLoading={isLoading} error={isError} data={data} />
-      </main>
+      </main> */}
     </div>
   );
 }
