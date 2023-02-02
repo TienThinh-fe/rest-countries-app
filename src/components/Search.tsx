@@ -2,6 +2,7 @@ import useStore from "../store";
 import { useState } from "react";
 
 export function Search() {
+  const theme = useStore((state: any) => state.theme);
   const setName = useStore((state: any) => state.setName);
   const setFilter = useStore((state: any) => state.setFilter);
 
@@ -19,7 +20,7 @@ export function Search() {
   }
 
   return (
-    <div className="search">
+    <div className={`search search__${theme}`}>
       <input
         type="text"
         placeholder="Search for a country..."

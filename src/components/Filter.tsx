@@ -10,6 +10,7 @@ export function Filter() {
     state.setFilter,
   ]);
   const setName = useStore((state: any) => state.setName);
+  const theme = useStore((state: any) => state.theme);
 
   const [isOpenFilter, setIsOpenFilter] = useState(false);
 
@@ -23,7 +24,7 @@ export function Filter() {
   }
 
   return (
-    <div className="filter" onClick={handleOpenFilter}>
+    <div className={`filter filter__${theme}`} onClick={handleOpenFilter}>
       <span>{filter ? filter : "Filter by Region"}</span>
       <img src={downArrow} alt="down arrow" />
       {isOpenFilter && <FilterOptions handleClick={handleClick} />}
