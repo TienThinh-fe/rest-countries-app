@@ -7,6 +7,9 @@ const useStore = create((set) => ({
 
   name: "",
   setName: (name: string) => set({ name }),
+
+  isLoadingDetail: true,
+  setIsLoadingDetail: (isLoadingDetail: boolean) => set({ isLoadingDetail }),
 }));
 
 export default useStore;

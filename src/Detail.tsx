@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { Header, DetailContent } from "./components";
 import { countryDetail } from "./interfaces";
 import { getDetailCountry } from "./helper";
+import useStore from "./store";
 
 import RightArrowIcon from "./assets/right-arrow.webp";
 
@@ -22,8 +23,11 @@ function Detail() {
     borders: [],
     flags: "",
   });
-  const [isLoading, setIsLoading] = useState<boolean>(true);
   const navigate = useNavigate();
+  const [isLoadingDetail, setIsLoadingDetail] = useStore((state: any) => [
+    state.isLoadingDetail,
+    state.setIsLoadingDetail,
+  ]);
 
   useEffect(() => {
     getDetailCountry(slug)
@@ -41,7 +45,7 @@ function Detail() {
           borders: res[0].borders,
           flags: res[0].flags.svg,
         });
-        setIsLoading(false);
+        setIsLoadingDetail(false);
       })
       .catch((err) => {
         console.log(err);
@@ -62,7 +66,7 @@ function Detail() {
           <span>Back</span>
         </span>
       </div>
-      {isLoading ? (
+      {isLoadingDetail ? (
         <div className="detail__content">Loading...</div>
       ) : (
         <DetailContent detail={detailCountry} />

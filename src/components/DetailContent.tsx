@@ -7,6 +7,7 @@ import {
   getStringFromObject,
   getCurrenciesString,
 } from "../helper";
+import useStore from "../store";
 
 export function DetailContent(detail: { detail: countryDetail }) {
   const {
@@ -22,11 +23,12 @@ export function DetailContent(detail: { detail: countryDetail }) {
     borders,
     flags,
   } = detail.detail;
-
   const navigate = useNavigate();
+  const setIsLoadingDetail = useStore((state: any) => state.setIsLoadingDetail);
 
   const handleClickBorder = (name: string) => {
     navigate(`/detail/${name}`);
+    setIsLoadingDetail(true);
   };
 
   return (
