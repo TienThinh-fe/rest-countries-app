@@ -10,6 +10,9 @@ const useStore = create((set) => ({
 
   isLoadingDetail: true,
   setIsLoadingDetail: (isLoadingDetail: boolean) => set({ isLoadingDetail }),
+
+  theme: "",
+  setTheme: (theme: string) => set({ theme }),
 }));
 
 export default useStore;

@@ -28,6 +28,7 @@ function Detail() {
     state.isLoadingDetail,
     state.setIsLoadingDetail,
   ]);
+  const theme = useStore((state: any) => state.theme);
 
   useEffect(() => {
     getDetailCountry(slug)
@@ -54,7 +55,7 @@ function Detail() {
   }, [slug]);
 
   return (
-    <div className="detail">
+    <div className={`detail detail__${theme}`}>
       <Header />
       <div
         className="detail__back"
