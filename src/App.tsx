@@ -1,5 +1,6 @@
+import { useState, useEffect } from "react";
 import { useGetCountries } from "./hooks";
-import { Header, Search, Filter, PreviewList } from "./components";
+import { Header, Search, Filter, PreviewList, BackToTop } from "./components";
 import useStore from "./store";
 
 function App() {
@@ -7,6 +8,18 @@ function App() {
   const name = useStore((state: any) => state.name);
   const theme = useStore((state: any) => state.theme);
   const { isLoading, isError, data } = useGetCountries(filter, name);
+  const [displayBackToTop, setDisplayBackToTop] = useState(false);
+
+  const toggleVisible = () => {
+    const scrolled = document.documentElement.scrollTop;
+    if (scrolled > 300) {
+      setDisplayBackToTop(true);
+    } else if (scrolled <= 300) {
+      setDisplayBackToTop(false);
+    }
+  };
+
+  window.addEventListener("scroll", toggleVisible);
 
   return (
     <div className="App">
@@ -16,8 +29,9 @@ function App() {
           <Search />
           <Filter />
         </div>
-        {/* <PreviewList isLoading={isLoading} error={isError} data={data} /> */}
+        <PreviewList isLoading={isLoading} error={isError} data={data} />
       </main>
+      <BackToTop display={displayBackToTop} />
     </div>
   );
 }

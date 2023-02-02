@@ -8,3 +8,4 @@ export * from "./Filter";
 export * from "./FilterOptions";
 export * from "./DetailContent";
 export * from "./BorderCountry";
+export * from "./BackToTop";
