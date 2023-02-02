@@ -200,7 +200,7 @@
       }
     }
     &__info {
-      width: 42%;
+      width: 46%;
       height: 280px;
       padding: 40px 0;
       &--title {
@@ -210,7 +210,7 @@
       }
       &--more {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 60% 40%;
         row-gap: 16px;
         margin-bottom: 72px;
         &__item {
@@ -230,18 +230,25 @@
           padding-right: 12px;
           font-weight: 600;
           font-size: utils.$detail-size;
+          width: 144px;
         }
         .country {
-          display: flex;
-          justify-content: center;
-          align-items: center;
           .border-country {
-            background-color: white;
-            box-shadow: utils.$box-shadow;
-            padding: 8px 20px;
-            margin: 0 4px;
-            span {
-              font-size: 12px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            row-gap: 12px;
+            &__item {
+              background-color: white;
+              box-shadow: utils.$box-shadow;
+              padding: 12px 0px;
+              margin: 0 4px;
+              cursor: pointer;
+              width: 100px;
+              span {
+                display: table;
+                margin: 0 auto;
+                font-size: 12px;
+              }
             }
           }
         }

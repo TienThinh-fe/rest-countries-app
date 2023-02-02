@@ -13,7 +13,6 @@ export function Search() {
 
   function handleSearch(e: any) {
     if (e.key === "Enter") {
-      console.log("searching...");
       setName(tempName);
       setFilter("");
     }

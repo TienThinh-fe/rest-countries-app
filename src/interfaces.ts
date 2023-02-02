@@ -16,3 +16,17 @@ export interface useQueryReturn {
   isLoading: boolean;
   isError: boolean;
 }
+
+export interface countryDetail {
+  name: string;
+  officialName: string;
+  population: number;
+  region: string;
+  subregion: string;
+  capital: string;
+  topLevelDomain: string[];
+  currencies: string[];
+  languages: string[];
+  borders: string[];
+  flags: string;
+}
