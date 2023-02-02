@@ -16,8 +16,8 @@ function App() {
           <Search />
           <Filter />
         </div>
-        <PreviewList isLoading={isLoading} error={isError} data={data} />
-      </main> */}
+        {/* <PreviewList isLoading={isLoading} error={isError} data={data} /> */}
+      </main>
     </div>
   );
 }
