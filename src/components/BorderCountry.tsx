@@ -25,9 +25,9 @@ export function BorderCountry({
 
   return (
     <div className="border-country">
-      {nameArray.map((name: string) => (
+      {nameArray.map((name: string, index: number) => (
         <div
-          key={name}
+          key={index}
           className="border-country__item"
           onClick={() => {
             handleClick(name);

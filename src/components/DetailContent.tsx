@@ -28,7 +28,6 @@ export function DetailContent(detail: { detail: countryDetail }) {
 
   const handleClickBorder = (name: string) => {
     navigate(`/detail/${name}`);
-    setIsLoadingDetail(true);
   };
 
   return (

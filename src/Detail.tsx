@@ -32,6 +32,7 @@ function Detail() {
   useEffect(() => {
     getDetailCountry(slug)
       .then((res) => {
+        setIsLoadingDetail(true);
         setDetailCountry({
           name: res[0].name.common,
           officialName: res[0].name.official,
