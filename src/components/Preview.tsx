@@ -1,17 +1,19 @@
 import { useNavigate } from "react-router-dom";
 import { countryPreview } from "../interfaces";
 import { formatNumber } from "../helper";
+import useStore from "../store";
 
 export function Preview({ country }: { country: countryPreview }) {
   const { name, population, region, capital, flags } = country;
   const navigate = useNavigate();
+  const theme = useStore((state: any) => state.theme);
 
   function handleClick() {
     navigate(`/detail/${name}`);
   }
 
   return (
-    <div className="preview" onClick={handleClick}>
+    <div className={`preview preview__${theme}`} onClick={handleClick}>
       <div className="preview__image">
         <img src={flags} alt={name} />
       </div>
